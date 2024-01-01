@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        h4{
+            text-align: center;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: goldenrod;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        hr{
+            color: black;
+        }
+        h1{
+            color: rgb(73, 70, 50);
+        }
+    </style>
+</head>
+<body>
+    <h4>This is the HOME page.</h4>
+
+    <div>
+        <button ><a href="/navContext/home/">Home</a></button>
+        <button ><a href="/navContext/about/">About</a></button>
+        <button ><a href="/navContext/contact/">Contact</a></button>
+    </div>
+
+    <hr>
+    <h1>Django Templates Filters</h1>
+
+    <h3>Length Filter: {{d | length}}</h3>
+
+    {% for i in lst %}
+    <h5> add filter: {{i|add:val}}</h5>
+    {% endfor %}
+
+    <h1>join filter: {{str | join:" "}}</h1>
+
+    <h1>Capfirst filter</h1>
+    {% for s in str %}
+    <h3>{{s | capfirst}}</h3>
+    {% endfor %}
+
+    <h1>Cut filter</h1>
+    <h2>main str: {{str}} &star; cut str: {{str | cut:","}}</h2>
+
+    <h1>dictsort filter</h1>
+    <h2>{{list | dictsort:"age"}}</h2>
+
+    <h1>First Filter</h1>
+    <h2>{{str | first}}</h2>
+
+    <h1>Last Filter</h1>
+    <h2>{{str | last}}</h2>
+
+    <h1>linenumbers filters</h1>
+    {% for i in list %}
+    <h2>{{i | linenumbers}}</h2>
+    {% endfor %}
+
+    <h1>Lower filter</h1>
+    <h2>{{str | lower}}</h2>
+
+    <h1>Upper filter</h1>
+    <h2>{{str | upper}}</h2>
+
+    <h1>title filter</h1>
+    <h2>{{str | title}}</h2>
+
+    <h1>random filter</h1>
+    <h2>{{str | random}}</h2>
+
+    <h1>slice filter</h1>
+    <h2>{{lst | slice:":2"}}</h2>
+
+</body>
+</html>

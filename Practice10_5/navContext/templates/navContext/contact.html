@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        h4{
+            text-align: center;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: goldenrod;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        h1{
+            color: rgb(65, 99, 14);
+        }
+    </style>
+</head>
+<body>
+    <h4>This is the CONTACT page.</h4>
+
+    <div>
+        <button ><a href="/navContext/home/">Home</a></button>
+    <button ><a href="/navContext/about/">About</a></button>
+    <button ><a href="/navContext/contact/">Contact</a></button>
+    </div>
+
+    <hr>
+    <h1>Unordered_list filter</h1>
+    <h2>{{val | unordered_list}}</h2>
+
+    <h1>slugifty filter</h1>
+    <h2>{{val | slugify}}</h2>
+
+    <h1>filesizeformat filter</h1>
+    <h2>{{var | filesizeformat}}</h2>
+
+    <h1>divisibleby filter</h1>
+    <h2>{{var | divisibleby:"3"}}</h2>
+
+    <h1>default filter</h1>
+    <h2>{{var | default:"nope"}}</h2>
+
+    <h1>center filter</h1>
+    <h2>{{val | center:"25"}}</h2>
+
+</body>
+</html>

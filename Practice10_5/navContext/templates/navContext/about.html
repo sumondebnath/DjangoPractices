@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <style>
+        h4{
+            text-align: center;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: goldenrod;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        h1{
+            color: rgb(10, 126, 126);
+        }
+    </style>
+</head>
+<body>
+    <h4>This is the ABOUT page.</h4>
+
+    <div>
+        <button ><a href="/navContext/home/">Home</a></button>
+    <button ><a href="/navContext/about/">About</a></button>
+    <button ><a href="/navContext/contact/">Contact</a></button>
+    </div>
+
+    <hr>
+
+    <h1>Truncatechars Filter</h1>
+    <h2>{{str | truncatechars:17}}</h2>
+
+    <h1>date filter</h1>
+    <h2>{{publish | date}}</h2>
+    <h2>{{publish | date:"D d Y M"}}</h2>
+    <h2>{{publish | date:"d d y m"}}</h2>
+    <h2>{{publish | date:"SHORT_DATE_FORMAT"}}</h2>
+
+    <h1>time filter</h1>
+    <h2>{{publish | time:"H:i"}}</h2>
+    <h2>{{publish | time:"h:i"}}</h2>
+    <h2>{{publish | time:"H\h i\m"}}</h2>
+
+    <h1>timesince filter</h1>
+    <h2>{{publish | timesince:publish}}</h2>
+
+    <h1>wordcount filter</h1>
+    <h2>{{str | wordcount}}</h2>
+
+    <h1>truncatewords filter</h1>
+    <h2>{{str | truncatewords:5}}</h2>
+
+    <h1>striptags filter</h1>
+    <h2>{{"This is a Button" | striptags}}</h2>
+
+    <h1>make_list filter</h1>
+    <h2>{{val | make_list}}</h2>
+</body>
+</html>
