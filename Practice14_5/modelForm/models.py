@@ -1,0 +1,32 @@
+from django.db import models
+
+# Create your models here.
+
+class allFields(models.Model):
+    name = models.CharField(max_length = 30)
+    email = models.EmailField()
+    # autoField = models.AutoField()
+    # bigAuto = models.BigAutoField()
+    bigInteger = models.BigIntegerField()
+    binary = models.BinaryField(max_length=30)
+    integer = models.IntegerField()
+    verify = models.BooleanField()
+    date = models.DateField()
+    datetime = models.DateTimeField()
+    decimal = models.DecimalField(max_digits=30, decimal_places=5)
+    duration = models.DurationField()
+    file = models.FileField()
+    filePath = models.FilePathField(path="templates/")
+    Float = models.FloatField()
+    # foreignKey = models.ForeignKey("self", on_delete=models.CASCADE)
+    genericIP = models.GenericIPAddressField()
+    image = models.ImageField(upload_to="templates/")
+    json = models.JSONField()
+    # manyToMany = models.ManyToManyField("otherModel")
+    positiveInteger = models.PositiveIntegerField()
+    positiveBig = models.PositiveBigIntegerField()
+    slug = models.SlugField()
+    text = models.TextField()
+    time = models.TimeField()
+    url = models.URLField()
+    uuid = models.UUIDField()

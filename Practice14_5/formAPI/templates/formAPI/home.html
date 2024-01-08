@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    {% load crispy_forms_tags %}
+
+    <div style="width: 30%; margin: auto; margin-top: 20px;">
+        <form method="post" action="">
+            {% csrf_token %}
+            <!-- {{form.as_p}} -->
+            <!-- {{form.as_table}} -->
+            <!-- {{form.as_ul}} -->
+            {{form | crispy}}
+            <button class="btn btn-secondary" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+{% endblock content %}
