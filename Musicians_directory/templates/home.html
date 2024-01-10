@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+    {% if data %}
+        <div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Musician Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Album Rating</th>
+                    <th scope="col">Instrument Type</th>
+                    <th scope="col">Album Name</th>
+                    <th scope="col">Release Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for info in data %}
+                <tr>
+                    <th scope="row">{{info.id}}</th>
+                    <td><a href="{% url 'edit_musician' info.musicians.id %}">{{info.musicians.first_name}} {{info.musicians.last_name}}</a></td>
+                    <td>{{info.musicians.email}}</td>
+                    <td>{{info.rating}}</td>
+                    <td>{{info.musicians.instrument_type}}</td>
+                    <td>{{info.album_name}}</td>
+                    <td>{{info.release_date}}</td>
+                    <td class="gap-3">
+                        <a class="btn btn-warning btn-sm" href="{% url 'edit_album' info.id %}">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="{% url 'delete' info.musicians.id %}">Delete</a>
+                    </td>
+                </tr>
+                <!-- <h1>{{info.musicians.id}} {{info.musicians.first_name}}</h1> -->
+                {% endfor %}
+                
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <h1 class="text-center mt-5 text-warning">NO DATA AVAILABLE...</h1>
+    {% endif %}
+    <!-- {{data}} -->
+{% endblock content %}
