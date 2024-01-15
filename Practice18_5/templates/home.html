@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+        </button>
+        <b class="text-{{message.tag}}">{{ message}}</b>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <h1 class="text-center mt-5">Home Page</h1>
+
+{% endblock content %}
