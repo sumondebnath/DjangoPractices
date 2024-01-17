@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div style="width: 35%;margin: auto;">
+        <h2>Musician Page</h2>
+        <form method="post" action="" novalidate>
+            {% csrf_token %}
+            {% for frm in form %}
+            <div>
+                {{frm.label_tag}}
+                <!-- {{form | crispy}} -->
+                {{frm}}
+                {{frm.errors | striptags}}
+            </div>
+            {% endfor %}
+            <br>
+            <button class="btn btn-warning">Add Musician</button>
+        </form>
+    </div>
+
+{% endblock content %}
